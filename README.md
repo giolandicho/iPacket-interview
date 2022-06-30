@@ -17,11 +17,11 @@ To start the react app, in another terminal:
 
 
 
-
+to run tests, run:
 
 ### npm test
 
-to run tests
+
 
 
 
