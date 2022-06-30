@@ -21,7 +21,6 @@ const getIdea = (users, i) => {
             let time = Math.floor(Math.random() * 24);
             users[i].idea.cost = randomNumber;
             users[i].idea.time = time;
-            console.log(users)
             return res.data;
     })
 }
