@@ -11,7 +11,14 @@ To start the server, run:
 To start the react app, in another terminal:
 
 ### cd client
+
 ### npm start
+
+
+
+### npm test
+
+to run tests
 
 
 
