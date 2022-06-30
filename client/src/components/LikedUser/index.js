@@ -29,7 +29,7 @@ function LikedUser({picture, name, email, phone, idea, rejectUser, allRejected})
                 <Idea idea={idea.this} forWho={idea.that} cost={idea.cost} time={idea.time}/>
             </div>
             <div className='button-container'>
-                <button onClick={handleClick}>Reject</button>
+                <button className='reject-button' onClick={handleClick}>Reject</button>
             </div>
         </div>
     }

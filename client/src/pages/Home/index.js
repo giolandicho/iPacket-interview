@@ -1,4 +1,5 @@
 import React from 'react'
+import './index.css'
 import User from '../../components/User'
 
 
@@ -14,7 +15,7 @@ function Home({users, likeUser}) {
         return(
           <User
             key={i} 
-            picture={user.picture.medium}
+            picture={user.picture.large}
             name={user.name.title+' '+user.name.first+' '+user.name.last}
             email={user.email}
             phone={user.cell}

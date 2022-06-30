@@ -18,3 +18,20 @@
     display:flex;
     justify-content: center;
 }
+button{
+    display: block;
+    margin: 40px auto 0px;
+    text-align: center;
+    background: #25ed8c;
+    border-radius: 3px;
+    box-shadow: 0 10px 20px -8px #25ed8c;
+    padding: 10px 17px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    text-decoration: none;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+}

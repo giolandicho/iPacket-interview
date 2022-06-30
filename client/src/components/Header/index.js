@@ -4,7 +4,7 @@ function Header({rejectAll, handleSortType, handleMaxCost, handleMaxTime}) {
   return (
     <div className='header-container'>
           <div className='reject-all-container'>
-            <button onClick={rejectAll}>Reject All</button>
+            <button className='reject-button' onClick={rejectAll}>Reject All</button>
           </div>
           <div className='menu-container'>
             <label>

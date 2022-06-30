@@ -144,7 +144,7 @@ function Likes() {
         return(
           <LikedUser
             key={i} 
-            picture={user.picture.medium}
+            picture={user.picture.large}
             name={user.name.title+' '+user.name.first+' '+user.name.last}
             email={user.email}
             phone={user.cell}
