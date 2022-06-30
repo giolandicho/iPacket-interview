@@ -33,7 +33,7 @@ const getIdeas = async(users) => {
     return res
 }
 const getUsers = () => {
-    axios.get('https://randomuser.me/api/?results=50')
+    axios.get('https://randomuser.me/api/?results=100')
     .then(res => users = res.data.results)
     .then(users => getIdeas(users));
 
