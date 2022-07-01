@@ -16,19 +16,19 @@ const renderWithRouter = (ui, {route = '/'} = {}) => {
 test('fetches all users', async () => {
   renderWithRouter(<App />)
   const users = await screen.findAllByText(/Estimated Time to Completion:/)
-  expect(users).toHaveLength(50);
+  expect(users).toHaveLength(100);
 });
 test('all buttons render', async() => {
   renderWithRouter(<App />)
   const buttons = await screen.findAllByRole('button')
-  expect(buttons).toHaveLength(50);
+  expect(buttons).toHaveLength(100);
 })
 test('user disappears on like', async () => {
   const {user} = renderWithRouter(<App />)
   const users = await screen.findAllByText(/Estimated Time to Completion:/)
-  expect(users).toHaveLength(50);
+  expect(users).toHaveLength(100);
 
-  await user.click(screen.getAllByRole('button')[0])
+  await user.click(screen.getAllByText('Like')[0])
   expect(users).toHaveLength(users.length);
 })
 test('navigate', async () => {
@@ -37,4 +37,13 @@ test('navigate', async () => {
   await user.click(screen.getByText(/Likes/i))
   await user.click(screen.getByText(/Reject All/i))
   expect(screen.getByText(/No candidates liked yet!/i)).toBeInTheDocument()
+})
+test('users get added to likes list', async() => {
+  const {user} = renderWithRouter(<App />)
+  await screen.findAllByText(/Estimated Time to Completion:/)
+  await user.click(screen.getAllByText('Like')[0])
+  await user.click(screen.getAllByText('Like')[1])
+  await user.click(screen.getByText(/Likes/i))
+  const users = await screen.findAllByText(/Reject/)
+  expect(users).toHaveLength(users.length)
 })
