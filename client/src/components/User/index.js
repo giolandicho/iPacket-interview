@@ -1,17 +1,15 @@
-import React, {useState} from 'react'
+import React from 'react'
 import "./index.css"
 import Idea from '../Idea'
 
 function User({picture, name, email, phone, idea, onLike}) {
-    const [clicked, setClicked] = useState(false)
     const handleClick = (e) => {
         e.preventDefault();
-        setClicked(true);
         onLike(e);
     }
   return (
     <div>
-        {!clicked && <div className='user-container'>
+         <div className='user-container'>
             <div className='picture-container'>
                 <img alt='user-pic' src={picture}/>
             </div>
@@ -30,7 +28,7 @@ function User({picture, name, email, phone, idea, onLike}) {
             <div className='button-container'>
                     <button onClick={handleClick}>Like</button>
             </div>
-        </div>}
+        </div>
     </div>
   )
 }
